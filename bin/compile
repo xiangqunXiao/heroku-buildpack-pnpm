@@ -224,8 +224,10 @@ install_bins() {
     meta_set "build-step" "install-pnpm"
     echo "-----> Install pnpm"
     curl -sL https://unpkg.com/@pnpm/self-installer | node
-    pnpm config set store-dir "$CACHE_DIR"/.pnpm-store
+    # pnpm config set store-dir "$CACHE_DIR"/.pnpm-store
   fi
+
+  echo "pnpm installed !!!!!!"
 
   # Download yarn if there is a yarn.lock file or if the user
   # has specified a version of yarn under "engines". We'll still
